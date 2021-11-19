@@ -57,7 +57,7 @@ const Index = ({ invite }) => {
 
   const handleChange = (event, newValue) => {
     // hack
-    InviteService.updateInviteTarget('group', 'd5206d80-4499-11ec-bf97-7105055dd807')
+    // InviteService.updateInviteTarget('group', 'd5206d80-4499-11ec-bf97-7105055dd807')
     setValue(newValue)
   }
 

@@ -265,7 +265,7 @@ const LeftHarmony = (props: Props) => {
             ''
           ) : (
             <>
-              <CreateGroup setShowChat={setShowChat} />
+              <CreateGroup setShowChat={setShowChat} setInvite={setInvite} setCreate={setCreate} />
             </>
           )}
         </div>

@@ -15,10 +15,12 @@ const initialGroupForm = {
 
 interface Props {
   setShowChat: any
+  setInvite: any
+  setCreate: any
 }
 
 const CreateGroup = (props: Props) => {
-  const { setShowChat } = props
+  const { setShowChat, setInvite, setCreate } = props
   const classes = useHarmonyStyles()
   const { darkMode, setDarkMode } = React.useContext(ModeContext)
   const [state, setState] = React.useState({ right: false })
@@ -151,7 +153,17 @@ const CreateGroup = (props: Props) => {
           </Container>
         </Drawer>
       </div>
-      <GroupList setShowChat={setShowChat} toggleUpdateDrawer={toggleUpdateDrawer} />
+      <GroupList
+        setShowChat={setShowChat}
+        groupForm={groupForm}
+        toggleUpdateDrawer={toggleUpdateDrawer}
+        setGroupForm={setGroupForm}
+        setGroupFormMode={setGroupFormMode}
+        anchorEl={anchorEl}
+        setAnchorEl={setAnchorEl}
+        setInvite={setInvite}
+        setCreate={setCreate}
+      />
     </div>
   )
 }
